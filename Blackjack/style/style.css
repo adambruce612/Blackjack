@@ -1,0 +1,42 @@
+body {
+    background: #000;
+    font-size: 10px;
+}
+
+.wrapper {
+    background: #016646;
+    color: #fff;
+    text-align: center;
+    border: 2px solid white;
+    display: grid;
+    grid-template-columns: repeat(12, [column] 1fr);
+}
+
+h1 {
+    grid-column: span 12;
+    font-size: 3em;
+}
+
+#scoreEl {
+    grid-column: 12/span 1;
+    font-size: 1.75em;
+}
+
+.cardBack {
+    width: 75px;
+    height: 100px;
+}
+
+#dealersHand, #playersHand {
+    grid-column: span 12;
+}
+
+#dealersCards, #playersCards {
+    grid-column: span 12;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+
