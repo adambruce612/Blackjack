@@ -38,5 +38,9 @@ h1 {
     gap: 10px;
 }
 
+.buttons {
+    grid-column: span 12;
+}
+
 
 
