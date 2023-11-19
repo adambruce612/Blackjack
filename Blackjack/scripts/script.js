@@ -2,7 +2,7 @@ const score = document.getElementById("scoreEl");
 const dealerCards = document.getElementById("dealersHand");
 const hitBtn = document.getElementById("hitBtn");
 const stayBtn = document.getElementById("stayBtn");
-const doubleBtn = document.getElementById("doubleBtn")
+const doubleBtn = document.getElementById("doubleBtn");
 
 // Create playerTotal (intially set to 1000 and put in DOM)
 let playerTotal = 1000;
@@ -30,13 +30,24 @@ function drawCard() {
     return cardValue;
 }
 
-let playerFirstCard = drawCard();
-let playerSecondCard = drawCard();
-let playerHandTotal = playerFirstCard.Value + playerSecondCard.Value;
+let playerFirstCard = drawCard().Value;
+let playerSecondCard = drawCard().Value;
+let playerHandTotal = playerFirstCard + playerSecondCard;
 
 let dealerFirstCard = drawCard();
 let dealerSecondCard = drawCard();
 let dealerHandTotal = dealerFirstCard.Value + dealerSecondCard.Value;
+
+
+hitBtn.addEventListener('click', hit());
+
+function hit() {
+    drawCard();
+    playerHandTotal += cardValue;
+    console.log(playerHandTotal);
+}
+
+
 
 
 
